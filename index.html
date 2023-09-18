@@ -101,8 +101,8 @@
                 float dDyn = length(h) - r;  
                 float dConst = length(h) - 15.;      
                 
-                vec3 c = vec3(247. / 255., 89. / 255., 183. / 255.);        
-                if (dDyn > -1.) c = vec3(245. / 255., 100. / 255., 186. / 255.);
+                vec3 c = vec3(0. / 255., 191. / 255., 255. / 255.);        
+                if (dDyn > -1.) c = vec3(0. / 255., 191. / 255., 255. / 255.);
                 vC = c;
                 pos = pos - pos / length(pos) * (dDyn) * 2.5;
 
@@ -123,7 +123,7 @@
     
             if ( vDiscard >= 0.5 ) {discard;}
             if (length(gl_PointCoord - 0.5) > 0.5) {discard;}
-            gl_FragColor = vec4( vC, 1.0);
+            gl_FragColor = vec4( vC, 0.234);
           }
         `
         })
